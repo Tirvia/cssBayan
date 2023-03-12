@@ -16,6 +16,7 @@ h1{
 .bayan{
     max-width: 70vw;
     margin: 0 auto;
+    background-color:  rgb(181, 240, 222);
 }
 .bayan-img{
     display: none;
@@ -28,10 +29,12 @@ img{
 }
 .bayan-title{    
     font-size: 2em;
-    display: block;
+    display: flex;
+    justify-content: space-between;
     cursor: pointer;
     background-color: rgb(154, 250, 237);
     padding: 1%;
+    margin: 0%;
     transition: background .2s ease-out;
 }
 .bayan-title:hover{
@@ -44,6 +47,11 @@ img{
 .bayan-input:checked ~ .bayan-img{
     display: block;
 }
+.bayan-input:checked + .bayan-title .close{
+    transform: rotate(180deg);
+    transition: .5s ease-out;
+}
+
 .bayan-input:checked ~ .bayan-title{
     background-color: rgb(61, 148, 94);
 }
