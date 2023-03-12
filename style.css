@@ -9,9 +9,10 @@ body{
 }
 h1{
     max-width: 70vw;
-    margin: 0 auto;
+    margin: 2% auto 1%;;
     font-size: 2.5em;
     color: rgb(6, 12, 99);
+    letter-spacing: 0.5rem;
 }
 .bayan{
     max-width: 70vw;
@@ -22,7 +23,8 @@ h1{
     display: none;
     max-width: 50vw;
     margin: 0 auto;
-    text-align: center;    
+    text-align: center;   
+    cursor: pointer; 
 }
 img{
     max-width: 50vw;
@@ -38,7 +40,7 @@ img{
     transition: background .2s ease-out;
 }
 .bayan-title:hover{
-    background-color: rgb(75, 240, 111);
+    background-color: rgba(127, 240, 151, 0.63);
 }
 .bayan-input{
     -webkit-appearance: none;
@@ -47,11 +49,33 @@ img{
 .bayan-input:checked ~ .bayan-img{
     display: block;
 }
+
 .bayan-input:checked + .bayan-title .close{
     transform: rotate(180deg);
     transition: .5s ease-out;
 }
-
+#bayan_01{
+    display: block;
+}
 .bayan-input:checked ~ .bayan-title{
     background-color: rgb(61, 148, 94);
+    color: rgb(169, 250, 131);
+}
+@media(max-width: 820px){
+    h1{
+        font-size: 2.0em;
+        letter-spacing: 0.3rem;
+    }
+    .bayan-title{    
+        font-size: 1.6em;
+    }
+}
+@media(max-width: 320px){
+    h1{
+        font-size: 1.6em;
+        letter-spacing: 0.1rem;
+    }
+    .bayan-title{    
+        font-size: 1.2em;
+    }
 }
